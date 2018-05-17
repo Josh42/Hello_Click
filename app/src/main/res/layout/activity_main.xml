@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/hello_world_how_are_you_doing"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/CLICK_ME"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.5"
+                android:text="@string/click_me"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/RESET"
+                tools:ignore="MissingConstraints,UnknownId"
+                tools:layout_editor_absoluteY="74dp" />
+
+
+            <Button
+                android:id="@+id/RESET"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="0.25"
+                android:text="@string/reset"
+                app:layout_constraintLeft_toRightOf="@+id/REVERSE"
+                app:layout_constraintRight_toLeftOf="@+id/CLICK_ME"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="74dp" />
+
+            <Button
+                android:id="@+id/REVERSE"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.25"
+                android:text="@string/REVERSE"
+                app:layout_constraintLeft_toRightOf="@+id/RESET"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="74dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/red_square"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:background="#FF0000"
+            android:gravity="center"
+            android:text="@string/_0" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:text="@string/increment_size"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/NORMAL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/Normal"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="74dp" />
+
+                <Button
+                    android:id="@+id/BIG"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/Big"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="74dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
