@@ -68,14 +68,34 @@
 
         </LinearLayout>
 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.95"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
         <TextView
             android:id="@+id/red_square"
             android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:layout_marginTop="0dp"
             android:background="#FF0000"
             android:gravity="center"
             android:text="@string/_0" />
+
+    </LinearLayout>
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
@@ -105,7 +125,7 @@
                     android:id="@+id/NORMAL"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="Main"
                     android:text="@string/Normal"
                     tools:ignore="MissingConstraints"
                     tools:layout_editor_absoluteY="74dp" />
